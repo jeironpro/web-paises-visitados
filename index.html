@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises visitados</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/paises.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animacion.css">
+</head>
+<body>
+    <div id="avion-wrapper">
+        <svg id="avion" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="32,2 4,62 32,50 60,62" fill="white" stroke="#444" stroke-width="2"/>
+            <line x1="32" y1="2" x2="32" y2="50" stroke="#555" stroke-width="2"/>
+            <line x1="32" y1="50" x2="20" y2="35" stroke="#aaa" stroke-width="1"/>
+            <line x1="32" y1="50" x2="44" y2="35" stroke="#aaa" stroke-width="1"/>
+        </svg>
+    </div>
+    <header>
+        <h1>Paises visitados</h1>
+    </header>
+    <main>
+        <div class="contenedor-filtro">
+            <input type="search" name="buscador" id="buscador" placeholder="buscar país" autocomplete="off">
+        </div>
+        <div id="contenedor-paises"></div>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados - JeironPro 2025</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="animacion.js"></script>
+    <script src="https://kit.fontawesome.com/25da21ab57.js" crossorigin="anonymous"></script>
+</body>
+</html>

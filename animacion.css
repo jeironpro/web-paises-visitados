@@ -1,0 +1,57 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(to top, #87ceeb, #e0f7ff);
+}
+
+.nube {
+    position: fixed;
+    background-image: url('data:image/svg+xml;utf8,<svg width="200" height="120" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" opacity="0.8"><ellipse cx="60" cy="60" rx="60" ry="30"/><ellipse cx="100" cy="50" rx="50" ry="25"/><ellipse cx="130" cy="65" rx="40" ry="20"/></g></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    animation: moverNube linear infinite;
+}
+
+@keyframes moverNube {
+    from { transform: translateX(-300px); }
+    to { transform: translateX(120vw); }
+}
+
+#avion-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+#avion {
+    width: 100%;
+    height: 100%;
+    transform-origin: center center;
+    transition: transform 0.1s linear;
+}
+
+.estela {
+    position: fixed;
+    width: 24px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    filter: blur(3px);
+    transform-origin: center center;
+    animation: desvanecerEstela 2s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes desvanecerEstela {
+    to {
+        opacity: 0;
+        transform: scale(1.5) translateY(10px);
+    }
+}
