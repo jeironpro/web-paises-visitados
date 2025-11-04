@@ -11,21 +11,21 @@ for (let i = 0; i < 20; i++) {
 }
 
 const avionWrapper = document.getElementById('avion-wrapper');
-  const avion = document.getElementById('avion');
+const avion = document.getElementById('avion');
 
-  let x = window.innerWidth / 2;
-  let y = window.innerHeight / 2;
-  let dx = Math.random() * 2 - 1;
-  let dy = Math.random() * 2 - 1;
+let x = window.innerWidth / 2;
+let y = window.innerHeight / 2;
+let dx = Math.random() * 2 - 1;
+let dy = Math.random() * 2 - 1;
 
-  function normalizar() {
+function normalizar() {
     const mag = Math.sqrt(dx * dx + dy * dy);
     dx /= mag;
     dy /= mag;
-  }
-  normalizar();
+}
+normalizar();
 
-  function mover() {
+function mover() {
     const velocidad = 2.5;
     x += dx * velocidad;
     y += dy * velocidad;
@@ -34,9 +34,9 @@ const avionWrapper = document.getElementById('avion-wrapper');
     if (y < 0 || y > window.innerHeight) dy *= -1;
 
     if (Math.random() < 0.01) {
-      dx += (Math.random() - 0.5) * 0.3;
-      dy += (Math.random() - 0.5) * 0.3;
-      normalizar();
+        dx += (Math.random() - 0.5) * 0.3;
+        dy += (Math.random() - 0.5) * 0.3;
+        normalizar();
     }
 
     const angulo = Math.atan2(dy, dx) * 180 / Math.PI + 90;

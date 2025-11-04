@@ -186,7 +186,7 @@
     {"nombre": "Panamá", "iso": "PA"},
     {"nombre": "Paraguay", "iso": "PY"},
     {"nombre": "Perú", "iso": "PE"},
-    {"nombre": "República Dominicana", "iso": "DO", "origen": true},
+    {"nombre": "República Dominicana", "iso": "DO"},
     {"nombre": "San Cristóbal y Nieves", "iso": "KN"},
     {"nombre": "Santa Lucía", "iso": "LC"},
     {"nombre": "San Vicente y las Granadinas", "iso": "VC"},

@@ -7,34 +7,14 @@ fetch("paises.json")
         const mostrarPaisesPorContinente = (data) => {
             contenedorPaises.innerHTML = '';
 
-            let paisOrigen = null;
-            let continenteDelOrigen = null;
             const paisesVisitados = [];
 
             for (const continente in data) {
                 for (const pais of data[continente]) {
-                    if (pais.origen) {
-                        paisOrigen = pais;
-                        continenteDelOrigen = continente;
-                    } else if (pais.visitado) {
+                    if (pais.visitado) {
                         paisesVisitados.push({ ...pais, continente });
                     }
                 }
-            }
-
-            if (paisOrigen) {
-                const divOrigen = document.createElement("div");
-                const pOrigen = document.createElement("p");
-                pOrigen.textContent = paisOrigen.nombre;
-                divOrigen.appendChild(pOrigen);
-
-                const icono = document.createElement("i");
-                icono.className = "fa-solid fa-map-pin origen-icono";
-                divOrigen.appendChild(icono);
-
-                divOrigen.style.backgroundImage = `url(img/${paisOrigen.iso.toLowerCase()}.png)`;
-                divOrigen.classList.add("pais");
-                contenedorPaises.appendChild(divOrigen);
             }
 
             if (paisesVisitados.length > 0) {
