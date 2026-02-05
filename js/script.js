@@ -1,4 +1,4 @@
-fetch("paises.json")
+fetch("../json/paises.json")
     .then(response => response.json())
     .then(data => {
         const contenedorPaises = document.getElementById("contenedor-paises");
