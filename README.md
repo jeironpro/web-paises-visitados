@@ -1,4 +1,4 @@
-# paises-visitados
+# web-paises-visitados
 
 ## 📌 Descripción
 Este proyecto forma parte de mi portafolio personal.  
